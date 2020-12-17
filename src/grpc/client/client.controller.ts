@@ -14,7 +14,6 @@ export class ClientController implements OnModuleInit {
   onModuleInit() {
     this.heroService = this.client.getService<HeroService>('HeroService');
   }
-
   @Get()
   getMany(): Observable<Hero[]> {
     const ids$ = new ReplaySubject<HeroById>();
