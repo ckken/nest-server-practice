@@ -1,10 +1,10 @@
-// hero/hero.proto
 syntax = "proto3";
 
 package hero;
 
-service HeroesService {
-  rpc FindOne (HeroById) returns (Hero) {}
+service HeroService {
+  rpc FindOne (HeroById) returns (Hero);
+  rpc FindMany (stream HeroById) returns (stream Hero);
 }
 
 message HeroById {
